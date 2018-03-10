@@ -15,4 +15,9 @@ namespace Dot7.common
     {
         public int temp;
     }
+    public class NewSomething
+    {
+        int i;
+    }
+    
 }
