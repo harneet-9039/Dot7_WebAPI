@@ -11,13 +11,6 @@ namespace Dot7.common
         public string password { get; set; }
         
     }
-    public class Something
-    {
-        public int temp;
-    }
-    public class NewSomething
-    {
-        int i;
-    }
+  
     
 }
