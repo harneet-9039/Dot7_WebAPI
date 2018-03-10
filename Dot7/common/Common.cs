@@ -10,4 +10,9 @@ namespace Dot7.common
         public string LoginID { get; set; }
         public string password { get; set; }
     }
+    public class NewSomething
+    {
+        int i;
+    }
+    
 }
