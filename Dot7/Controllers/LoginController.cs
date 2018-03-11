@@ -13,20 +13,19 @@ namespace Dot7.Controllers
     {
         // GET api/values
         [HttpPost]
-        public HttpResponseMessage CheckCredentials([FromBody]Login Obj)
+        public String CheckCredentials([FromBody]Login Obj)
         {
             CheckUserCredentialsTableAdapter r = new CheckUserCredentialsTableAdapter();
             object obj = r.CheckUserCredentials(Obj.LoginID, Obj.password);
             Boolean value = Convert.ToBoolean(obj);
             if (value == true)
             {
-                var message = Request.CreateResponse(HttpStatusCode.Found);
-                message.Headers.Location = new Uri(Request.RequestUri + Obj.LoginID.ToString());
+                String message = Request.CreateResponse(HttpStatusCode.Found).ToString();
                 return message;
             }
             else
             {
-                var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, Obj.LoginID.ToString());
+                var message = Request.CreateErrorResponse(HttpStatusCode.NotFound,Obj.LoginID).ToString();
                 return message;
             }
         }
