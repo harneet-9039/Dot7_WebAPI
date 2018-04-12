@@ -29,6 +29,7 @@ namespace Dot7
             EnableCorsAttribute cors = new EnableCorsAttribute("*","*","*");
             config.EnableCors(cors);
             config.Formatters.Remove(config.Formatters.XmlFormatter);
+           
             config.Formatters.JsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }
