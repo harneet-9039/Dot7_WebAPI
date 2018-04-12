@@ -82,8 +82,8 @@ namespace Dot7.Controllers
         {
             try
             {
-                string applicationID = "AAAAafLlpbk:APA91bHjAxSpf1iwia0IyoqUtTQAdXhXUAFNjf0EFffoy7S4hDuiWDs_E5m0tpT08VpqS2H26rh7kl52k7jfe3gVC0c5dffp6UH-0zq01EjtGTPaKhaJ_SnWgRISAGvwkW_M8AYkFPAK";
-                string senderId = "455046702521";
+                string applicationID = "";
+                string senderId = "";
                 string deviceId = token.token.ToString();
                 WebRequest tRequest = WebRequest.Create("https://fcm.googleapis.com/fcm/send");
                 tRequest.Method = "post";
